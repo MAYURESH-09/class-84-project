@@ -17,6 +17,10 @@ rover_image = "car1.png" ;
      background_image_tag.src = background_image ; 
 
      background_car_tag = new Image();
+     background_car_tag.onload = show_image_ROVER ;
+     background_car_tag.src = rover_image ;
+
+     background_car_tag = new Image();
      background_car_tag.onload = show_image_rover ;
      background_car_tag.src = rover_image ; 
  }
@@ -29,6 +33,11 @@ rover_image = "car1.png" ;
  function show_image_rover ()
  {
     ctx.drawImage(background_car_tag,car_x,car_y,car_width,car_height) ;
+ }
+
+ function show_image_ROVER ()
+ {
+    ctx.drawImage(background_car_tag,200, 250,car_width,car_height) ;
  }
 
 window.addEventListener("keydown",my_key_down) ;
